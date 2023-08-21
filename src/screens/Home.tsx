@@ -1,11 +1,13 @@
 import React from 'react';
-import {Text} from 'react-native';
+
 import ScreenWrapper from '../components/Shared/ScreenWrapper';
+import LocationSwiper from '../components/Home/LocationSwiper';
+import {View} from 'react-native';
 
 const HomeScreen = () => {
   return (
     <ScreenWrapper>
-      <Text>Home</Text>
+      <LocationSwiper />
     </ScreenWrapper>
   );
 };
