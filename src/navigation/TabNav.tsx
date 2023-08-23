@@ -5,8 +5,8 @@ import {
 } from '@react-navigation/bottom-tabs';
 import {
   BuildingStorefrontIcon,
-  HomeIcon,
   UserIcon,
+  Squares2X2Icon,
 } from 'react-native-heroicons/outline';
 
 import HomeScreen from '../screens/Home';
@@ -25,7 +25,7 @@ type TabBarIconFunction = (props: TabBarIconProps) => ReactNode;
 
 const homeTabBarIcon: TabBarIconFunction = props => {
   const {color, size} = props;
-  return <HomeIcon size={size} color={color} />;
+  return <Squares2X2Icon size={size} color={color} />;
 };
 
 const homeOptions = {
@@ -52,10 +52,11 @@ const profileOptions = {
 
 const tabScreenOptions: BottomTabNavigationOptions = {
   headerStyle: {backgroundColor: colors.white},
-  headerTitleStyle: {color: colors.green[500]},
+  headerTitleStyle: {color: colors.black, fontSize: 18},
   tabBarActiveTintColor: colors.green[500],
   tabBarInactiveTintColor: colors.gray[500],
   tabBarStyle: {paddingVertical: 8, backgroundColor: colors.white},
+  headerTitleAlign: 'left',
 };
 
 const TabNav = () => {
