@@ -1,5 +1,8 @@
 import React, {ReactNode} from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {
+  createBottomTabNavigator,
+  BottomTabNavigationOptions,
+} from '@react-navigation/bottom-tabs';
 import {
   BuildingStorefrontIcon,
   HomeIcon,
@@ -9,6 +12,7 @@ import {
 import HomeScreen from '../screens/Home';
 import JobsScreen from '../screens/Jobs';
 import ProfileScreen from '../screens/Profile';
+import {colors} from '../consts/colors';
 
 const Tab = createBottomTabNavigator();
 
@@ -46,9 +50,17 @@ const profileOptions = {
   tabBarIcon: profileTabBarIcon,
 };
 
+const tabScreenOptions: BottomTabNavigationOptions = {
+  headerStyle: {backgroundColor: colors.white},
+  headerTitleStyle: {color: colors.green[500]},
+  tabBarActiveTintColor: colors.green[500],
+  tabBarInactiveTintColor: colors.gray[500],
+  tabBarStyle: {paddingVertical: 8, backgroundColor: colors.white},
+};
+
 const TabNav = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={tabScreenOptions}>
       <Tab.Screen name="Home" component={HomeScreen} options={homeOptions} />
       <Tab.Screen name="Jobs" component={JobsScreen} options={jobOptions} />
       <Tab.Screen
