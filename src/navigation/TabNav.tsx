@@ -28,8 +28,9 @@ const homeTabBarIcon: TabBarIconFunction = props => {
   return <Squares2X2Icon size={size} color={color} />;
 };
 
-const homeOptions = {
+const homeOptions: BottomTabNavigationOptions = {
   tabBarIcon: homeTabBarIcon,
+  headerShown: false,
 };
 
 const jobTabBarIcon: TabBarIconFunction = props => {
@@ -37,7 +38,7 @@ const jobTabBarIcon: TabBarIconFunction = props => {
   return <BuildingStorefrontIcon size={size} color={color} />;
 };
 
-const jobOptions = {
+const jobOptions: BottomTabNavigationOptions = {
   tabBarIcon: jobTabBarIcon,
 };
 
@@ -46,7 +47,7 @@ const profileTabBarIcon: TabBarIconFunction = props => {
   return <UserIcon size={size} color={color} />;
 };
 
-const profileOptions = {
+const profileOptions: BottomTabNavigationOptions = {
   tabBarIcon: profileTabBarIcon,
 };
 
