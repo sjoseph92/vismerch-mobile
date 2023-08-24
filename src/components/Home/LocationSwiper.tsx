@@ -4,8 +4,8 @@ import Carousel from 'react-native-reanimated-carousel';
 
 import {SBItem} from './SBItem';
 
-const PAGE_WIDTH = Dimensions.get('window').width;
-const CAROUSEL_HEIGHT = PAGE_WIDTH * 0.6;
+export const PAGE_WIDTH = Dimensions.get('window').width;
+export const CAROUSEL_HEIGHT = PAGE_WIDTH * 0.625;
 
 const colors = [
   '#26292E',
